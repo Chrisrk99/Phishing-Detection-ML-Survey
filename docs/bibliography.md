@@ -9,6 +9,7 @@ This list will be updated as more references are collected.
 2. **M. Khonji, Y. Iraqi, and A. Jones**, "Phishing Detection: A Literature Survey," *IEEE Commun. Surveys Tuts.*, vol. 15, no. 4, pp. 2091–2121, 2013. [PDF](Phishing_Detection_A_Literature_Survey.pdf)
 3. **S. Abu-Nimeh, D. Nappa, X. Wang, and S. Nair**, "Detecting Phishing Websites Using Machine Learning," *PLOS One*, 2017. [PDF](Detecting_phishing_websites_using_machine_learning_technique.pdf)
 4. **R. Dhamija and J. D. Tygar**, "Client-side Defense Against Web-based Identity Theft," *USENIX Security Symposium*, 2005. [PDF](Client-side_defense_against_web-based_identity_theft.pdf)
+5. **S. Garera et al.**, "A Framework for Detecting Phishing Websites," *Proc. IEEE Symposium on Security and Privacy (S&P)*, 2007. [PDF](Framework_for_Detecting_Phishing_2007.pdf)
 
 ---
 
@@ -19,6 +20,10 @@ This list will be updated as more references are collected.
 4. **L. Chen and Q. Wang**, "Leveraging High-Performance Computing for Scalable Phishing Detection," *Future Generation Computer Systems*, vol. 145, 2024. [PDF](PHISHING_DETECTION_USING_MACHINE_LEARNING-A_MODEL_.pdf)
 5. **J. Kim and S. Park**, "Real-Time Phishing Detection with Enhanced Machine Learning Models," *Journal of Network and Computer Applications*, vol. 210, 2023. [PDF](Real-Time_Phishing_Detection_with_Enhanced_Machine_Learning_Models.pdf)
 6. **C. Ahmadi and J. Chen**, "Enhancing Phishing Detection: A Multi-Layer Ensemble Approach Integrating Machine Learning for Robust Cybersecurity," *IEEE Symposium on Computers and Communications (ISCC)*, 2024. [PDF](Enhancing_Phishing_Detection_A_Multi-Layer_Ensemble_Approach_Integrating_Machine_Learning_for_Robust_Cybersecurity.pdf)
+7. **A. Aljofey et al.**, "An Effective Phishing Detection Model Using Deep Learning," *Computers & Security*, 2023. [PDF](Effective_Phishing_Detection_2023.pdf)
+8. **M. A. Adebowale et al.**, "Intelligent Phishing Detection Using Feature Selection," *Journal of Internet Services and Applications*, 2022. [PDF](Intelligent_Phishing_Detection_2022.pdf)
+9. "Comparative Investigation of Traditional Machine Learning Models," *Journal of Cybersecurity*, 2023. [PDF](Comparative_Investigation_of_Traditional_Machine_Learning_Models.pdf)
+10. "Ethereum Phishing Scam Detection Based on Data Augmentation Methods," *IEEE Access*, 2023. [PDF](Ethereum_Phishing_Scam_Detection_Based_on_Data_Augmentation_Methods.pdf)
 
 ---
 
@@ -36,4 +41,4 @@ This list will be updated as more references are collected.
 
 ---
 
-### 🔍 *Last Updated: February 26, 2025*
+### 🔍 *Last Updated: March 21, 2025*
