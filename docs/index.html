@@ -14,24 +14,33 @@
             color: #333;
         }
         h1, h2, h3, h4 {
-            color: #2c3e50;
+            margin-top: 30px;
         }
         h1 {
             font-size: 2.2em;
+            color: #2c3e50;
             border-bottom: 2px solid #2c3e50;
             padding-bottom: 10px;
         }
         h2 {
             font-size: 1.8em;
-            margin-top: 30px;
+            color: #006d77; /* Deep teal for category titles */
+            background-color: #e5f6f5; /* Very light teal background */
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
         h3 {
             font-size: 1.4em;
-            margin-top: 20px;
+            color: #83c5be; /* Lighter teal for sub-hierarchy titles */
+            border-left: 4px solid #83c5be;
+            padding-left: 10px;
+            margin-bottom: 15px;
         }
         h4 {
             font-size: 1.2em;
-            margin-top: 15px;
+            color: #468faf; /* Muted blue for paper type titles */
+            margin-bottom: 10px;
         }
         p {
             font-size: 1.1em;
@@ -59,6 +68,12 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .section {
+            background-color: #f9f9f9; /* Very light gray for section background */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
         .paper {
             margin-bottom: 20px;
             padding-bottom: 10px;
@@ -67,6 +82,10 @@
         .paper-title {
             font-weight: bold;
             font-size: 1.1em;
+            color: #333;
+            border-bottom: 1px solid #006d77; /* Teal underline to match category titles */
+            display: inline-block;
+            padding-bottom: 2px;
         }
         .paper-details {
             font-style: italic;
@@ -103,291 +122,305 @@
         <p>This list will be updated as more references are collected.</p>
         <hr>
 
-        <h2>1. URL-Based Phishing Detection</h2>
+        <div class="section">
+            <h2>1. URL-Based Phishing Detection</h2>
 
-        <h3>Deep Learning for URL Detection</h3>
+            <h3>Deep Learning for URL Detection</h3>
 
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">1. E. A. Aldakheel et al., "A Deep Learning-Based Innovative Technique for Phishing Detection in Modern Security with Uniform Resource Locators," <span class="paper-details">Sensors, vol. 23, no. 9, p. 4403, 2023.</span> <a href="A_DEEP_LEARNING-BASED_INNOVATIVE_TECHNIQUE_FOR_PHISHING_DETECTION_IN_MODERN_SECURITY_WITH_UNIFORM.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Introduces a CNN-based phishing detection model that processes segmented and one-hot encoded URL features, achieving high precision and recall across benchmark datasets.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> The paper introduces a CNN-based phishing detection model that processes segmented and one-hot encoded URL features. Unlike models relying on content or external services, this method focuses solely on syntactic URL patterns, making it resilient against zero-day phishing. Evaluation on benchmark datasets shows the model achieves high precision and recall with minimal latency.</p>
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">1. E. A. Aldakheel et al., "A Deep Learning-Based Innovative Technique for Phishing Detection in Modern Security with Uniform Resource Locators," <span class="paper-details">Sensors, vol. 23, no. 9, p. 4403, 2023.</span> <a href="A_DEEP_LEARNING-BASED_INNOVATIVE_TECHNIQUE_FOR_PHISHING_DETECTION_IN_MODERN_SECURITY_WITH_UNIFORM.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Introduces a CNN-based phishing detection model that processes segmented and one-hot encoded URL features, achieving high precision and recall across benchmark datasets.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> The paper introduces a CNN-based phishing detection model that processes segmented and one-hot encoded URL features. Unlike models relying on content or external services, this method focuses solely on syntactic URL patterns, making it resilient against zero-day phishing. Evaluation on benchmark datasets shows the model achieves high precision and recall with minimal latency.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">2. S. Y. Yerima and M. K. Alzaylaee, "High Accuracy Phishing Detection Based on Convolutional Neural Networks," <span class="paper-details">Int. J. Adv. Comput. Sci. Appl., vol. 14, no. 4, pp. 1–6, 2023.</span> <a href="HIGH_ACCURACY_PHISHING_DETECTION_BASED_ON_CONVOLUTIONAL_NEURAL_NETWORKS.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Proposes a lightweight CNN optimized for mobile environments, analyzing URL strings for phishing patterns with real-time capabilities.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This work presents a lightweight convolutional neural network tailored for mobile and embedded systems. It analyzes only URL data for classification, reducing computational cost while maintaining detection accuracy. Extensive experiments demonstrate its real-time efficiency and robustness against both traditional and obfuscated phishing attempts.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">3. T. Zhao & X. Liu, "Deep Learning Approaches for Phishing URL Classification," <span class="paper-details">in Proc. IEEE International Conference on Machine Learning (ICML), 2021.</span> <a href="PHISHING_WEBSITE_DETECTION_USING_MACHINE_LEARNING.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Compares deep CNN and LSTM-CNN architectures on character-level URL inputs, showing superior performance of sequence-aware models.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> The study explores CNN and hybrid LSTM-CNN models for classifying phishing URLs. It compares deep models with traditional classifiers, showing that sequence-aware networks significantly improve detection. Emphasis is placed on learning character-level URL representations, which enhance generalization to obfuscated phishing links.</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">4. X. Wu & Y. Chen, "Phishing Website Detection Using Advanced Machine Learning Techniques," <span class="paper-details">in Proc. IEEE Symposium on Security and Privacy (S&P), 2014.</span> <a href="PHISHING_WEBSITE_DETECTION_USING_ADVANCED_MACHINE_LEARNING_TECHNIQUES.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Applies RNNs to model phishing URLs, achieving generalization to morphing and zero-day attacks.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> The authors apply Random Forest, XGBoost, and SVM on lexical and host-based features to detect phishing websites. The model is trained on diversified datasets to boost generalization, especially for zero-day phishing domains. The work also includes feature correlation analysis to identify the most influential predictors.</p>
+            </div>
+
+            <h3>Comparative Studies on URL Detection</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">5. A. Gupta and P. Sharma, "Phishing Detection Using Machine Learning Techniques: A Comprehensive Review," <span class="paper-details">Journal of Cybersecurity and Privacy, vol. 2, no. 2, 2022.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING_TECHNIQUES_A_COMPREHENSIVE_REVIEW.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Provides a comparative study of traditional classifiers (SVM, KNN, Decision Trees) using lexical URL features, highlighting the importance of feature selection.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> The paper compares classical ML algorithms—SVM, KNN, Decision Trees, and ensemble methods—across phishing datasets. It highlights differences in precision, recall, and training time, and discusses how feature selection and data imbalance affect outcomes. The authors provide insights into optimal model configurations and underline the need for adaptive defenses.</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">6. Z. Chen et al., "Comparative Investigation of Traditional Machine Learning Models and Transformer Models for Phishing Email Detection," <span class="paper-details">Journal of Cybersecurity, 2023.</span> <a href="COMPARATIVE_INVESTIGATION_OF_TRADITIONAL_MACHINE_LEARNING_MODELS_AND_TRANSFORMER_MODELS_FOR_PHISHING_EMAIL_DETECTION.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Benchmarks Transformer-based models (BERT, DistilBERT) against classical ML for phishing emails, including tokenized URLs as features.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Benchmarks BERT and DistilBERT against classical models. Transformers outperform traditional models in capturing deceptive linguistic cues but come with higher compute cost.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">7. L. Lee, K. Lee, Y. Liu, & H. Chen, "User-Centric Phishing Threat Detection," <span class="paper-details">in Proc. IEEE International Conference on Cybersecurity (ICC), 2023.</span> <a href="USER-CENTRIC_PHISHING_THREAT_DETECTION.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Incorporates lexical URL data into phishing classification models, although primarily focused on user behavior.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This paper proposes a behavioral phishing detection framework that incorporates user interaction data—such as click delays and hover patterns—into its ML model. It enhances traditional detection by focusing on how users behave in real-time scenarios, improving detection of targeted phishing that evades content-only approaches.</p>
+            </div>
         </div>
 
-        <div class="paper">
-            <p class="paper-title">2. S. Y. Yerima and M. K. Alzaylaee, "High Accuracy Phishing Detection Based on Convolutional Neural Networks," <span class="paper-details">Int. J. Adv. Comput. Sci. Appl., vol. 14, no. 4, pp. 1–6, 2023.</span> <a href="HIGH_ACCURACY_PHISHING_DETECTION_BASED_ON_CONVOLUTIONAL_NEURAL_NETWORKS.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Proposes a lightweight CNN optimized for mobile environments, analyzing URL strings for phishing patterns with real-time capabilities.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This work presents a lightweight convolutional neural network tailored for mobile and embedded systems. It analyzes only URL data for classification, reducing computational cost while maintaining detection accuracy. Extensive experiments demonstrate its real-time efficiency and robustness against both traditional and obfuscated phishing attempts.</p>
+        <div class="section">
+            <h2>2. Content-Based Phishing Detection (Email, HTML, JS, Visual Cues)</h2>
+
+            <h3>Email Content Detection</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">1. I. Fette, N. Sadeh, and A. Tomasic, "Learning to Detect Phishing Emails," <span class="paper-details">Proc. 16th Int. Conf. World Wide Web (WWW '07), 2007.</span> <a href="LEARNING_TO_DETECT_PHISHING.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> PILFER system extracts email header, content, and URL features, achieving 96%+ accuracy in early ML-based phishing detection.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This paper introduces PILFER, a machine learning-based system that analyzes 10 features extracted from email headers, content, and URLs to detect phishing. The authors demonstrate that combining standard spam filters with phishing-specific features achieves over 96% accuracy. The model is trained and validated on real-world datasets, offering an early-stage email defense mechanism.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">2. S. Kumar & V. Rao, "Phishing Detection Using NLP and Machine Learning," <span class="paper-details">in Proc. IEEE International Conference on Data Science and Machine Learning (DSML), 2022.</span> <a href="PHISHING_DETECTION_USING_NLP_AND_MACHINE_LEARNING.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Uses NLP to identify phishing traits in email text and subject lines, applying ensemble ML techniques for improved accuracy.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> By applying NLP to email content and subject lines, the paper extracts linguistic features indicative of phishing attempts. An ensemble ML model is trained on these features to catch sophisticated, context-aware phishing emails. The study shows particular effectiveness against spear-phishing and socially engineered attacks.</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">3. M. A. Adebowale et al., "Intelligent Phishing Detection Using Feature Selection," <span class="paper-details">Journal of Internet Services and Applications, 2022.</span> <a href="INTELLIGENT_PHISHING_DETECTION_2022.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Investigates how feature selection (e.g., chi-square, mutual info) improves ML performance in phishing email classification.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Evaluates feature selection methods such as chi-square and mutual information. Shows that careful dimensionality reduction improves model performance and generalization.</p>
+            </div>
+
+            <h3>Webpage Content Detection</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">4. A. Aljofey et al., "An Effective Phishing Detection Model Using Deep Learning," <span class="paper-details">Computers & Security, 2023.</span> <a href="EFFECTIVE_PHISHING_DETECTION_2023.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Applies hybrid CNN-RNN to analyze HTML and JavaScript code of phishing websites, targeting obfuscated and script-heavy attacks.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Utilizes a hybrid CNN-RNN approach with features from HTML and JS content. Demonstrates strong performance in detecting disguised and obfuscated phishing scripts.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">5. S. Abu-Nimeh, D. Nappa, X. Wang, and S. Nair, "Detecting Phishing Websites Using Machine Learning," <span class="paper-details">PLOS One, 2017.</span> <a href="DETECTING_PHISHING_WEBSITES_USING_MACHINE_LEARNING_TECHNIQUE.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Analyzes website code, visual layout, and URL structure to classify phishing using RNN-based models, validated on large datasets.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> The authors use recurrent neural networks (RNNs) with LSTM layers to model phishing URLs as sequences. By learning temporal patterns in character-level data, their system detects phishing without needing third-party blacklists or content inspection. The model is tested on over 13,000 URLs, achieving strong generalization against domain-morphing techniques.</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">6. S. Garera et al., "A Framework for Detecting Phishing Websites," <span class="paper-details">Proc. IEEE Symposium on Security and Privacy (S&P), 2007.</span> <a href="FRAMEWORK_FOR_DETECTING_PHISHING_2007.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> CANTINA+ framework uses term frequency, link trustworthiness, and layout similarity for phishing detection.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> CANTINA+ is proposed as a content-based phishing detection system that uses features such as term popularity, page layout, and domain trust. The framework filters non-login pages and applies heuristics to identify near-duplicate phishing sites. Tested on over 13,000 sites, it achieves 92% true positives and under 1.5% false positives.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">7. X. Wu & Y. Chen, "Phishing Website Detection Using Advanced Machine Learning Techniques," <span class="paper-details">in Proc. IEEE Symposium on Security and Privacy (S&P), 2024.</span> <a href="PHISHING_WEBSITE_DETECTION_USING_ADVANCED_MACHINE_LEARNING_TECHNIQUES.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Applies advanced ML classifiers to web-based content features, targeting dynamic web attacks and multi-vector phishing.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> The authors apply Random Forest, XGBoost, and SVM on lexical and host-based features to detect phishing websites. The model is trained on diversified datasets to boost generalization, especially for zero-day phishing domains. The work also includes feature correlation analysis to identify the most influential predictors.</p>
+            </div>
+
+            <h3>Behavioral Motivations for Content-Based Detection</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">8. R. Dhamija and J. D. Tygar, "Client-side Defense Against Web-based Identity Theft," <span class="paper-details">USENIX Security Symposium, 2005.</span> <a href="CLIENT-SIDE_DEFENSE_AGAINST_WEB-BASED_IDENTITY_THEFT.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Foundational usability study showing that visual indicators (e.g., HTTPS, lock icons) are ineffective against user deception, motivating content and interface-based ML strategies.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Through user experiments, the paper reveals that over 20% of users fall for well-crafted phishing websites, even with visible browser security cues. It emphasizes how users ignore or misunderstand HTTPS indicators and advocates for redesigned security UI elements. The findings underline the importance of human-centered phishing countermeasures.</p>
+            </div>
         </div>
 
-        <div class="paper">
-            <p class="paper-title">3. T. Zhao & X. Liu, "Deep Learning Approaches for Phishing URL Classification," <span class="paper-details">in Proc. IEEE International Conference on Machine Learning (ICML), 2021.</span> <a href="PHISHING_WEBSITE_DETECTION_USING_MACHINE_LEARNING.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Compares deep CNN and LSTM-CNN architectures on character-level URL inputs, showing superior performance of sequence-aware models.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> The study explores CNN and hybrid LSTM-CNN models for classifying phishing URLs. It compares deep models with traditional classifiers, showing that sequence-aware networks significantly improve detection. Emphasis is placed on learning character-level URL representations, which enhance generalization to obfuscated phishing links.</p>
+        <div class="section">
+            <h2>3. Ensemble and Hybrid Models</h2>
+
+            <h3>Ensemble Models for Phishing Detection</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">1. C. Ahmadi and J. Chen, "Enhancing Phishing Detection: A Multi-Layer Ensemble Approach Integrating Machine Learning for Robust Cybersecurity," <span class="paper-details">IEEE Symposium on Computers and Communications (ISCC), 2024.</span> <a href="ENHANCING_PHISHING_DETECTION_A_MULTI-LAYER_ENSEMBLE_APPROACH_INTEGRATING_MACHINE_LEARNING_FOR_ROBUST_CYBERSECURITY.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Uses stacking, boosting, and bagging for robust phishing detection, outperforming single classifiers under adversarial conditions.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Combines stacking, bagging, and boosting to build a resilient ensemble. Tested across datasets, the model offers increased robustness against adversarial phishing techniques.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">2. J. Smith & R. Carter, "Machine Learning for Phishing Prevention in Real-Time Systems," <span class="paper-details">in Proc. ACM Symposium on Applied Computing (SAC), 2023.</span> <a href="USER-CENTRIC_PHISHING_THREAT_DETECTION.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Deploys ensemble of Logistic Regression, SVM, and Decision Trees in real-time environments, demonstrating stability and fast prediction.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> The authors design a multi-layer ensemble classifier that dynamically adapts to evolving phishing attacks in real-time systems. Using a combination of Logistic Regression, Decision Trees, and SVMs, the model maintains high accuracy and low latency. The system is validated on live traffic simulations, proving its viability in production scenarios.</p>
+            </div>
+
+            <h3>Hybrid Deep Learning Models</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">3. U. Zara et al., "Phishing Website Detection Using Deep Learning Models," <span class="paper-details">IEEE Access, 2024.</span> <a href="A_DEEP_LEARNING-BASED_INNOVATIVE_TECHNIQUE_FOR_PHISHING_DETECTION_IN_MODERN_SECURITY_WITH_UNIFORM.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Combines CNN and LSTM layers to model sequential and spatial features of phishing sites, applied to both visual and structural page data.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">4. V. Onih, "Phishing Detection Using Machine Learning: A Model Development and Integration," <span class="paper-details">IJSMR, 2024.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING-A_MODEL.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Develops a hybrid phishing detection pipeline using Random Forest and Gradient Boosting, emphasizing modular, noise-resilient design.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Presents an ML pipeline utilizing Random Forest and Gradient Boosting, focusing on tuning and feature engineering. Emphasizes modular deployment and adaptability to noisy environments.</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">5. A. Aljofey et al., "An Effective Phishing Detection Model Using Deep Learning," <span class="paper-details">Computers & Security, 2023.</span> <a href="EFFECTIVE_PHISHING_DETECTION_2023.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Contributes to this category through its CNN-RNN hybrid architecture for phishing detection.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (See Webpage Content Detection for annotation.)</p>
+            </div>
         </div>
 
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">4. X. Wu & Y. Chen, "Phishing Website Detection Using Advanced Machine Learning Techniques," <span class="paper-details">in Proc. IEEE Symposium on Security and Privacy (S&P), 2014.</span> <a href="PHISHING_WEBSITE_DETECTION_USING_ADVANCED_MACHINE_LEARNING_TECHNIQUES.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Applies RNNs to model phishing URLs, achieving generalization to morphing and zero-day attacks.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> The authors apply Random Forest, XGBoost, and SVM on lexical and host-based features to detect phishing websites. The model is trained on diversified datasets to boost generalization, especially for zero-day phishing domains. The work also includes feature correlation analysis to identify the most influential predictors.</p>
+        <div class="section">
+            <h2>4. HPC-Enhanced ML for Phishing Detection</h2>
+
+            <h3>Distributed HPC Pipelines</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">1. T. Brown & M. Garcia, "Scalable Phishing Detection with HPC-Enhanced ML," <span class="paper-details">in Proc. International Conference on High Performance Computing (HPC), 2024.</span> <a href="MATHEMATICAL_MODELING_OF_THE_INFLUENCE_OF_INTERFER.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Implements TensorFlow-based pipeline on HPC clusters, enabling fast, large-scale phishing URL detection with real-time inference.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This paper presents a distributed ML pipeline for phishing detection using HPC clusters. Leveraging parallelized TensorFlow, the authors train large-scale models capable of analyzing thousands of URLs per second. The study demonstrates the practicality of HPC environments for real-time, enterprise-scale threat monitoring.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">2. L. Chen and Q. Wang, "Leveraging High-Performance Computing for Scalable Phishing Detection," <span class="paper-details">Future Generation Computer Systems, vol. 145, 2024.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING-A_MODEL.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Uses Random Forest and Boosted Trees in an HPC setup to reduce training time and increase throughput, targeting enterprise-level deployment.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">3. "Distributed High-Performance Computing Methods for Accelerating Deep Learning Training," <span class="paper-details">IEEE TPDS, 2024.</span> <a href="DISTRIBUTED_HIGH-PERFORMANCE_COMPUTING_METHODS_FOR_ACCELERATING_DEEP_LEARNING_TRAINING.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> General paper on accelerating DL with HPC, includes use cases in security applications like phishing and malware.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
+            </div>
+
+            <h3>Cloud HPC for Real-Time Detection</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">4. P. Nguyen & L. Tran, "Phishing Attack Detection Using Neural Networks on Cloud HPC," <span class="paper-details">in Proc. IEEE Conference on Cloud Computing (CLOUD), 2022.</span> <a href="PHISHING_ATTACK_DETECTION_USING_CONVOLUTIONAL_NEURAL_NETWORKS.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Deploys CNN phishing detector on cloud HPC systems, demonstrating real-time detection for high-volume email streams.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This paper implements a convolutional neural network for phishing detection, optimized for execution on cloud-based HPC systems. The authors highlight the model’s scalability and parallel processing advantages, achieving reduced training and inference times. Evaluation on large datasets confirms enhanced throughput and near-real-time prediction capabilities.</p>
+            </div>
+
+            <h3>Performance Optimization with HPC</h3>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">5. S. Kumar & V. Rao, "HPC-Enabled Phishing Detection with Deep Learning," <span class="paper-details">in Proc. IEEE International Conference on Big Data (Big Data), 2024.</span> <a href="MACHINE_LEARNING_ALGORITHMS_AND_FRAMEWORKS_IN_RANSOMWARE_DETECTION.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Discusses latency and performance benchmarks for DL models on HPC, using phishing as a use case.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Although centered on malware and ransomware, the paper evaluates CNN, RNN, and hybrid deep learning models for detecting phishing indicators. Using HPC infrastructure, the authors benchmark multiple ML frameworks, analyzing latency, accuracy, and system resource usage. The results support HPC integration as a solution for large-scale phishing analytics.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">6. T. Brown & M. Garcia, "Mathematical Modeling of the Influence of Interference," <span class="paper-details">in Proc. International Conference on High Performance Computing (HPC), 2024.</span> <a href="MATHEMATICAL_MODELING_OF_THE_INFLUENCE_OF_INTERFER.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Analyzes how interference and resource allocation in parallelized ML affect model stability and training time.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
+            </div>
         </div>
 
-        <h3>Comparative Studies on URL Detection</h3>
+        <div class="section">
+            <h2>5. Behavioral / User-Centric Phishing Detection</h2>
 
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">5. A. Gupta and P. Sharma, "Phishing Detection Using Machine Learning Techniques: A Comprehensive Review," <span class="paper-details">Journal of Cybersecurity and Privacy, vol. 2, no. 2, 2022.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING_TECHNIQUES_A_COMPREHENSIVE_REVIEW.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Provides a comparative study of traditional classifiers (SVM, KNN, Decision Trees) using lexical URL features, highlighting the importance of feature selection.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> The paper compares classical ML algorithms—SVM, KNN, Decision Trees, and ensemble methods—across phishing datasets. It highlights differences in precision, recall, and training time, and discusses how feature selection and data imbalance affect outcomes. The authors provide insights into optimal model configurations and underline the need for adaptive defenses.</p>
+            <h3>Foundational Behavioral Studies</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">1. R. Dhamija and J. D. Tygar, "Client-side Defense Against Web-based Identity Theft," <span class="paper-details">USENIX Security Symposium, 2005.</span> <a href="CLIENT-SIDE_DEFENSE_AGAINST_WEB-BASED_IDENTITY_THEFT.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Demonstrates why users fail to recognize phishing even with visual cues, highlighting gaps that ML must fill.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Through user experiments, the paper reveals that over 20% of users fall for well-crafted phishing websites, even with visible browser security cues. It emphasizes how users ignore or misunderstand HTTPS indicators and advocates for redesigned security UI elements. The findings underline the importance of human-centered phishing countermeasures.</p>
+            </div>
+
+            <h3>User-Centric ML Applications</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">2. L. Lee, K. Lee, Y. Liu, & H. Chen, "User-Centric Phishing Threat Detection," <span class="paper-details">in Proc. IEEE International Conference on Cybersecurity (ICC), 2023.</span> <a href="USER-CENTRIC_PHISHING_THREAT_DETECTION.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Uses user interaction data (e.g., click delay, mouse hover) in ML models to predict phishing attempts in real time.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This paper proposes a behavioral phishing detection framework that incorporates user interaction data—such as click delays and hover patterns—into its ML model. It enhances traditional detection by focusing on how users behave in real-time scenarios, improving detection of targeted phishing that evades content-only approaches.</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">3. P. D., Praveen J., Suhasini S., & Parthasarathy B., "Enhancing Internet Security: A Machine Learning-Based Browser Extension to Prevent Phishing Attacks," <span class="paper-details">in Proc. 2024 International Conference on Communication, Computer Sciences and Engineering (IC3SE).</span> <a href="ENHANCING_INTERNET_SECURITY_A_MACHINE_LEARNING-BASED_BROWSER_EXTENSION_TO_PREVENT_PHISHING_ATTACKS.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Develops browser extension with integrated ML model, flagging phishing sites using minimal user feedback and real-time page inspection.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This paper develops a browser extension that flags phishing websites in real time using URL-based classification. The model is trained with lightweight ML algorithms and integrated directly into the browser for seamless detection. It also features a user-reporting system to improve model feedback and accuracy over time.</p>
+            </div>
         </div>
 
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">6. Z. Chen et al., "Comparative Investigation of Traditional Machine Learning Models and Transformer Models for Phishing Email Detection," <span class="paper-details">Journal of Cybersecurity, 2023.</span> <a href="COMPARATIVE_INVESTIGATION_OF_TRADITIONAL_MACHINE_LEARNING_MODELS_AND_TRANSFORMER_MODELS_FOR_PHISHING_EMAIL_DETECTION.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Benchmarks Transformer-based models (BERT, DistilBERT) against classical ML for phishing emails, including tokenized URLs as features.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Benchmarks BERT and DistilBERT against classical models. Transformers outperform traditional models in capturing deceptive linguistic cues but come with higher compute cost.</p>
+        <div class="section">
+            <h2>6. Real-Time and Specialized Phishing Detection</h2>
+
+            <h3>Real-Time Detection Systems</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">1. J. Kim and S. Park, "Real-Time Phishing Detection with Enhanced Machine Learning Models," <span class="paper-details">Journal of Network and Computer Applications, vol. 210, 2023.</span> <a href="REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Uses boosted tree models with optimized feature selection for sub-second phishing detection, highlighting latency reduction strategies.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Features an ensemble ML pipeline with feature pruning for speed. Demonstrates sub-second detection times and pinpoints critical URL features using sensitivity analysis.</p>
+            </div>
+
+            <div class="paper">
+                <p class="paper-title">2. E. Shombot et al., "Real-Time Phishing Detection with Enhanced Machine Learning Models," <span class="paper-details">Cyber Security and Applications, 2024.</span> <a href="REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Implements ensemble methods with reduced dimensionality for fast phishing classification in live environments.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
+            </div>
+
+            <h3>Specialized Phishing Detection (e.g., Blockchain)</h3>
+
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">3. Z. Chen et al., "Ethereum Phishing Scam Detection Based on Data Augmentation Method and Hybrid Graph Neural Network Model," <span class="paper-details">IEEE Access, 2023.</span> <a href="ETHEREUM_PHISHING_SCAM_DETECTION_BASED_ON_DATA_AUGMENTATION_METHOD_AND_HYBRID_GRAPH_NEURAL_NETWORK_MODEL.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Focuses on Ethereum phishing detection using graph neural networks and time-series modeling, identifying scam wallet behavior.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> Proposes a GNN model combining graph learning and time-series processing for Ethereum scam detection. Achieves high accuracy using Conv1D, GRU, and node embedding methods.</p>
+            </div>
+
+            <h4>Secondary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">4. X. Wu & Y. Chen, "Dynamic Phishing Detection Using ML and HPC Integration," <span class="paper-details">in Proc. International Conference on Cybersecurity (ICC), 2023.</span> <a href="DETECTION_OF_CYBER_ATTACKS_XSS_SQLI_PHISHING_ATTACKS_AND_DETECTING_INTRUSION_USING_MACHINE_LEARNING_ALGORITHMS.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Broader cyberattack detection including phishing, using ML models that generalize across intrusion types.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> A comparative ML study applying CNN, Logistic Regression, and SVM to detect XSS, SQL injection, and phishing attacks. The paper finds that different attacks require different algorithms—SVM performs best for phishing, while CNN leads in XSS detection. The study reinforces that hybrid defense systems must adapt to attack-specific characteristics.</p>
+            </div>
         </div>
 
-        <div class="paper">
-            <p class="paper-title">7. L. Lee, K. Lee, Y. Liu, & H. Chen, "User-Centric Phishing Threat Detection," <span class="paper-details">in Proc. IEEE International Conference on Cybersecurity (ICC), 2023.</span> <a href="USER-CENTRIC_PHISHING_THREAT_DETECTION.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Incorporates lexical URL data into phishing classification models, although primarily focused on user behavior.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This paper proposes a behavioral phishing detection framework that incorporates user interaction data—such as click delays and hover patterns—into its ML model. It enhances traditional detection by focusing on how users behave in real-time scenarios, improving detection of targeted phishing that evades content-only approaches.</p>
-        </div>
+        <div class="section">
+            <h2>7. Comprehensive Reviews and Surveys</h2>
 
-        <h2>2. Content-Based Phishing Detection (Email, HTML, JS, Visual Cues)</h2>
+            <h3>General Reviews on Phishing Detection</h3>
 
-        <h3>Email Content Detection</h3>
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">1. V. Borate et al., "A Comprehensive Review of Phishing Attack Detection Using Machine Learning Techniques," <span class="paper-details">IJARSCT, 2024.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING_TECHNIQUES_A_COMPREHENSIVE_REVIEW.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Offers a literature review on phishing detection techniques, categorizing approaches by ML type and feature set.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
+            </div>
 
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">1. I. Fette, N. Sadeh, and A. Tomasic, "Learning to Detect Phishing Emails," <span class="paper-details">Proc. 16th Int. Conf. World Wide Web (WWW '07), 2007.</span> <a href="LEARNING_TO_DETECT_PHISHING.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> PILFER system extracts email header, content, and URL features, achieving 96%+ accuracy in early ML-based phishing detection.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This paper introduces PILFER, a machine learning-based system that analyzes 10 features extracted from email headers, content, and URLs to detect phishing. The authors demonstrate that combining standard spam filters with phishing-specific features achieves over 96% accuracy. The model is trained and validated on real-world datasets, offering an early-stage email defense mechanism.</p>
-        </div>
+            <div class="paper">
+                <p class="paper-title">2. M. Khonji, Y. Iraqi, and A. Jones, "Phishing Detection: A Literature Survey," <span class="paper-details">IEEE Commun. Surveys Tuts., vol. 15, no. 4, pp. 2091–2121, 2013.</span> <a href="PHISHING_DETECTION_A_LITERATURE_SURVEY.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Extensive survey categorizing phishing detection strategies by phase and technique, emphasizing the role of ML and NLP.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> This extensive survey categorizes phishing detection strategies by phase (e.g., detection, prevention, response) and by technique (e.g., blacklist, ML, visual analysis). It critiques user education and toolbars as limited solutions and emphasizes the growing role of ML and NLP. The paper also identifies gaps in scalability and adaptability to novel phishing vectors.</p>
+            </div>
 
-        <div class="paper">
-            <p class="paper-title">2. S. Kumar & V. Rao, "Phishing Detection Using NLP and Machine Learning," <span class="paper-details">in Proc. IEEE International Conference on Data Science and Machine Learning (DSML), 2022.</span> <a href="PHISHING_DETECTION_USING_NLP_AND_MACHINE_LEARNING.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Uses NLP to identify phishing traits in email text and subject lines, applying ensemble ML techniques for improved accuracy.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> By applying NLP to email content and subject lines, the paper extracts linguistic features indicative of phishing attempts. An ensemble ML model is trained on these features to catch sophisticated, context-aware phishing emails. The study shows particular effectiveness against spear-phishing and socially engineered attacks.</p>
-        </div>
+            <h3>HPC and ML Reviews</h3>
 
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">3. M. A. Adebowale et al., "Intelligent Phishing Detection Using Feature Selection," <span class="paper-details">Journal of Internet Services and Applications, 2022.</span> <a href="INTELLIGENT_PHISHING_DETECTION_2022.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Investigates how feature selection (e.g., chi-square, mutual info) improves ML performance in phishing email classification.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Evaluates feature selection methods such as chi-square and mutual information. Shows that careful dimensionality reduction improves model performance and generalization.</p>
-        </div>
-
-        <h3>Webpage Content Detection</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">4. A. Aljofey et al., "An Effective Phishing Detection Model Using Deep Learning," <span class="paper-details">Computers & Security, 2023.</span> <a href="EFFECTIVE_PHISHING_DETECTION_2023.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Applies hybrid CNN-RNN to analyze HTML and JavaScript code of phishing websites, targeting obfuscated and script-heavy attacks.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Utilizes a hybrid CNN-RNN approach with features from HTML and JS content. Demonstrates strong performance in detecting disguised and obfuscated phishing scripts.</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">5. S. Abu-Nimeh, D. Nappa, X. Wang, and S. Nair, "Detecting Phishing Websites Using Machine Learning," <span class="paper-details">PLOS One, 2017.</span> <a href="DETECTING_PHISHING_WEBSITES_USING_MACHINE_LEARNING_TECHNIQUE.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Analyzes website code, visual layout, and URL structure to classify phishing using RNN-based models, validated on large datasets.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> The authors use recurrent neural networks (RNNs) with LSTM layers to model phishing URLs as sequences. By learning temporal patterns in character-level data, their system detects phishing without needing third-party blacklists or content inspection. The model is tested on over 13,000 URLs, achieving strong generalization against domain-morphing techniques.</p>
-        </div>
-
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">6. S. Garera et al., "A Framework for Detecting Phishing Websites," <span class="paper-details">Proc. IEEE Symposium on Security and Privacy (S&P), 2007.</span> <a href="FRAMEWORK_FOR_DETECTING_PHISHING_2007.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> CANTINA+ framework uses term frequency, link trustworthiness, and layout similarity for phishing detection.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> CANTINA+ is proposed as a content-based phishing detection system that uses features such as term popularity, page layout, and domain trust. The framework filters non-login pages and applies heuristics to identify near-duplicate phishing sites. Tested on over 13,000 sites, it achieves 92% true positives and under 1.5% false positives.</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">7. X. Wu & Y. Chen, "Phishing Website Detection Using Advanced Machine Learning Techniques," <span class="paper-details">in Proc. IEEE Symposium on Security and Privacy (S&P), 2024.</span> <a href="PHISHING_WEBSITE_DETECTION_USING_ADVANCED_MACHINE_LEARNING_TECHNIQUES.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Applies advanced ML classifiers to web-based content features, targeting dynamic web attacks and multi-vector phishing.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> The authors apply Random Forest, XGBoost, and SVM on lexical and host-based features to detect phishing websites. The model is trained on diversified datasets to boost generalization, especially for zero-day phishing domains. The work also includes feature correlation analysis to identify the most influential predictors.</p>
-        </div>
-
-        <h3>Behavioral Motivations for Content-Based Detection</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">8. R. Dhamija and J. D. Tygar, "Client-side Defense Against Web-based Identity Theft," <span class="paper-details">USENIX Security Symposium, 2005.</span> <a href="CLIENT-SIDE_DEFENSE_AGAINST_WEB-BASED_IDENTITY_THEFT.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Foundational usability study showing that visual indicators (e.g., HTTPS, lock icons) are ineffective against user deception, motivating content and interface-based ML strategies.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Through user experiments, the paper reveals that over 20% of users fall for well-crafted phishing websites, even with visible browser security cues. It emphasizes how users ignore or misunderstand HTTPS indicators and advocates for redesigned security UI elements. The findings underline the importance of human-centered phishing countermeasures.</p>
-        </div>
-
-        <h2>3. Ensemble and Hybrid Models</h2>
-
-        <h3>Ensemble Models for Phishing Detection</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">1. C. Ahmadi and J. Chen, "Enhancing Phishing Detection: A Multi-Layer Ensemble Approach Integrating Machine Learning for Robust Cybersecurity," <span class="paper-details">IEEE Symposium on Computers and Communications (ISCC), 2024.</span> <a href="ENHANCING_PHISHING_DETECTION_A_MULTI-LAYER_ENSEMBLE_APPROACH_INTEGRATING_MACHINE_LEARNING_FOR_ROBUST_CYBERSECURITY.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Uses stacking, boosting, and bagging for robust phishing detection, outperforming single classifiers under adversarial conditions.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Combines stacking, bagging, and boosting to build a resilient ensemble. Tested across datasets, the model offers increased robustness against adversarial phishing techniques.</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">2. J. Smith & R. Carter, "Machine Learning for Phishing Prevention in Real-Time Systems," <span class="paper-details">in Proc. ACM Symposium on Applied Computing (SAC), 2023.</span> <a href="USER-CENTRIC_PHISHING_THREAT_DETECTION.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Deploys ensemble of Logistic Regression, SVM, and Decision Trees in real-time environments, demonstrating stability and fast prediction.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> The authors design a multi-layer ensemble classifier that dynamically adapts to evolving phishing attacks in real-time systems. Using a combination of Logistic Regression, Decision Trees, and SVMs, the model maintains high accuracy and low latency. The system is validated on live traffic simulations, proving its viability in production scenarios.</p>
-        </div>
-
-        <h3>Hybrid Deep Learning Models</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">3. U. Zara et al., "Phishing Website Detection Using Deep Learning Models," <span class="paper-details">IEEE Access, 2024.</span> <a href="A_DEEP_LEARNING-BASED_INNOVATIVE_TECHNIQUE_FOR_PHISHING_DETECTION_IN_MODERN_SECURITY_WITH_UNIFORM.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Combines CNN and LSTM layers to model sequential and spatial features of phishing sites, applied to both visual and structural page data.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">4. V. Onih, "Phishing Detection Using Machine Learning: A Model Development and Integration," <span class="paper-details">IJSMR, 2024.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING-A_MODEL.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Develops a hybrid phishing detection pipeline using Random Forest and Gradient Boosting, emphasizing modular, noise-resilient design.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Presents an ML pipeline utilizing Random Forest and Gradient Boosting, focusing on tuning and feature engineering. Emphasizes modular deployment and adaptability to noisy environments.</p>
-        </div>
-
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">5. A. Aljofey et al., "An Effective Phishing Detection Model Using Deep Learning," <span class="paper-details">Computers & Security, 2023.</span> <a href="EFFECTIVE_PHISHING_DETECTION_2023.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Contributes to this category through its CNN-RNN hybrid architecture for phishing detection.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (See Webpage Content Detection for annotation.)</p>
-        </div>
-
-        <h2>4. HPC-Enhanced ML for Phishing Detection</h2>
-
-        <h3>Distributed HPC Pipelines</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">1. T. Brown & M. Garcia, "Scalable Phishing Detection with HPC-Enhanced ML," <span class="paper-details">in Proc. International Conference on High Performance Computing (HPC), 2024.</span> <a href="MATHEMATICAL_MODELING_OF_THE_INFLUENCE_OF_INTERFER.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Implements TensorFlow-based pipeline on HPC clusters, enabling fast, large-scale phishing URL detection with real-time inference.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This paper presents a distributed ML pipeline for phishing detection using HPC clusters. Leveraging parallelized TensorFlow, the authors train large-scale models capable of analyzing thousands of URLs per second. The study demonstrates the practicality of HPC environments for real-time, enterprise-scale threat monitoring.</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">2. L. Chen and Q. Wang, "Leveraging High-Performance Computing for Scalable Phishing Detection," <span class="paper-details">Future Generation Computer Systems, vol. 145, 2024.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING-A_MODEL.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Uses Random Forest and Boosted Trees in an HPC setup to reduce training time and increase throughput, targeting enterprise-level deployment.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
-        </div>
-
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">3. "Distributed High-Performance Computing Methods for Accelerating Deep Learning Training," <span class="paper-details">IEEE TPDS, 2024.</span> <a href="DISTRIBUTED_HIGH-PERFORMANCE_COMPUTING_METHODS_FOR_ACCELERATING_DEEP_LEARNING_TRAINING.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> General paper on accelerating DL with HPC, includes use cases in security applications like phishing and malware.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
-        </div>
-
-        <h3>Cloud HPC for Real-Time Detection</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">4. P. Nguyen & L. Tran, "Phishing Attack Detection Using Neural Networks on Cloud HPC," <span class="paper-details">in Proc. IEEE Conference on Cloud Computing (CLOUD), 2022.</span> <a href="PHISHING_ATTACK_DETECTION_USING_CONVOLUTIONAL_NEURAL_NETWORKS.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Deploys CNN phishing detector on cloud HPC systems, demonstrating real-time detection for high-volume email streams.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This paper implements a convolutional neural network for phishing detection, optimized for execution on cloud-based HPC systems. The authors highlight the model’s scalability and parallel processing advantages, achieving reduced training and inference times. Evaluation on large datasets confirms enhanced throughput and near-real-time prediction capabilities.</p>
-        </div>
-
-        <h3>Performance Optimization with HPC</h3>
-
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">5. S. Kumar & V. Rao, "HPC-Enabled Phishing Detection with Deep Learning," <span class="paper-details">in Proc. IEEE International Conference on Big Data (Big Data), 2024.</span> <a href="MACHINE_LEARNING_ALGORITHMS_AND_FRAMEWORKS_IN_RANSOMWARE_DETECTION.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Discusses latency and performance benchmarks for DL models on HPC, using phishing as a use case.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Although centered on malware and ransomware, the paper evaluates CNN, RNN, and hybrid deep learning models for detecting phishing indicators. Using HPC infrastructure, the authors benchmark multiple ML frameworks, analyzing latency, accuracy, and system resource usage. The results support HPC integration as a solution for large-scale phishing analytics.</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">6. T. Brown & M. Garcia, "Mathematical Modeling of the Influence of Interference," <span class="paper-details">in Proc. International Conference on High Performance Computing (HPC), 2024.</span> <a href="MATHEMATICAL_MODELING_OF_THE_INFLUENCE_OF_INTERFER.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Analyzes how interference and resource allocation in parallelized ML affect model stability and training time.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
-        </div>
-
-        <h2>5. Behavioral / User-Centric Phishing Detection</h2>
-
-        <h3>Foundational Behavioral Studies</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">1. R. Dhamija and J. D. Tygar, "Client-side Defense Against Web-based Identity Theft," <span class="paper-details">USENIX Security Symposium, 2005.</span> <a href="CLIENT-SIDE_DEFENSE_AGAINST_WEB-BASED_IDENTITY_THEFT.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Demonstrates why users fail to recognize phishing even with visual cues, highlighting gaps that ML must fill.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Through user experiments, the paper reveals that over 20% of users fall for well-crafted phishing websites, even with visible browser security cues. It emphasizes how users ignore or misunderstand HTTPS indicators and advocates for redesigned security UI elements. The findings underline the importance of human-centered phishing countermeasures.</p>
-        </div>
-
-        <h3>User-Centric ML Applications</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">2. L. Lee, K. Lee, Y. Liu, & H. Chen, "User-Centric Phishing Threat Detection," <span class="paper-details">in Proc. IEEE International Conference on Cybersecurity (ICC), 2023.</span> <a href="USER-CENTRIC_PHISHING_THREAT_DETECTION.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Uses user interaction data (e.g., click delay, mouse hover) in ML models to predict phishing attempts in real time.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This paper proposes a behavioral phishing detection framework that incorporates user interaction data—such as click delays and hover patterns—into its ML model. It enhances traditional detection by focusing on how users behave in real-time scenarios, improving detection of targeted phishing that evades content-only approaches.</p>
-        </div>
-
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">3. P. D., Praveen J., Suhasini S., & Parthasarathy B., "Enhancing Internet Security: A Machine Learning-Based Browser Extension to Prevent Phishing Attacks," <span class="paper-details">in Proc. 2024 International Conference on Communication, Computer Sciences and Engineering (IC3SE).</span> <a href="ENHANCING_INTERNET_SECURITY_A_MACHINE_LEARNING-BASED_BROWSER_EXTENSION_TO_PREVENT_PHISHING_ATTACKS.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Develops browser extension with integrated ML model, flagging phishing sites using minimal user feedback and real-time page inspection.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This paper develops a browser extension that flags phishing websites in real time using URL-based classification. The model is trained with lightweight ML algorithms and integrated directly into the browser for seamless detection. It also features a user-reporting system to improve model feedback and accuracy over time.</p>
-        </div>
-
-        <h2>6. Real-Time and Specialized Phishing Detection</h2>
-
-        <h3>Real-Time Detection Systems</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">1. J. Kim and S. Park, "Real-Time Phishing Detection with Enhanced Machine Learning Models," <span class="paper-details">Journal of Network and Computer Applications, vol. 210, 2023.</span> <a href="REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Uses boosted tree models with optimized feature selection for sub-second phishing detection, highlighting latency reduction strategies.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Features an ensemble ML pipeline with feature pruning for speed. Demonstrates sub-second detection times and pinpoints critical URL features using sensitivity analysis.</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">2. E. Shombot et al., "Real-Time Phishing Detection with Enhanced Machine Learning Models," <span class="paper-details">Cyber Security and Applications, 2024.</span> <a href="REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Implements ensemble methods with reduced dimensionality for fast phishing classification in live environments.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
-        </div>
-
-        <h3>Specialized Phishing Detection (e.g., Blockchain)</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">3. Z. Chen et al., "Ethereum Phishing Scam Detection Based on Data Augmentation Method and Hybrid Graph Neural Network Model," <span class="paper-details">IEEE Access, 2023.</span> <a href="ETHEREUM_PHISHING_SCAM_DETECTION_BASED_ON_DATA_AUGMENTATION_METHOD_AND_HYBRID_GRAPH_NEURAL_NETWORK_MODEL.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Focuses on Ethereum phishing detection using graph neural networks and time-series modeling, identifying scam wallet behavior.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> Proposes a GNN model combining graph learning and time-series processing for Ethereum scam detection. Achieves high accuracy using Conv1D, GRU, and node embedding methods.</p>
-        </div>
-
-        <h4>Secondary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">4. X. Wu & Y. Chen, "Dynamic Phishing Detection Using ML and HPC Integration," <span class="paper-details">in Proc. International Conference on Cybersecurity (ICC), 2023.</span> <a href="DETECTION_OF_CYBER_ATTACKS_XSS_SQLI_PHISHING_ATTACKS_AND_DETECTING_INTRUSION_USING_MACHINE_LEARNING_ALGORITHMS.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Broader cyberattack detection including phishing, using ML models that generalize across intrusion types.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> A comparative ML study applying CNN, Logistic Regression, and SVM to detect XSS, SQL injection, and phishing attacks. The paper finds that different attacks require different algorithms—SVM performs best for phishing, while CNN leads in XSS detection. The study reinforces that hybrid defense systems must adapt to attack-specific characteristics.</p>
-        </div>
-
-        <h2>7. Comprehensive Reviews and Surveys</h2>
-
-        <h3>General Reviews on Phishing Detection</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">1. V. Borate et al., "A Comprehensive Review of Phishing Attack Detection Using Machine Learning Techniques," <span class="paper-details">IJARSCT, 2024.</span> <a href="PHISHING_DETECTION_USING_MACHINE_LEARNING_TECHNIQUES_A_COMPREHENSIVE_REVIEW.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Offers a literature review on phishing detection techniques, categorizing approaches by ML type and feature set.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
-        </div>
-
-        <div class="paper">
-            <p class="paper-title">2. M. Khonji, Y. Iraqi, and A. Jones, "Phishing Detection: A Literature Survey," <span class="paper-details">IEEE Commun. Surveys Tuts., vol. 15, no. 4, pp. 2091–2121, 2013.</span> <a href="PHISHING_DETECTION_A_LITERATURE_SURVEY.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Extensive survey categorizing phishing detection strategies by phase and technique, emphasizing the role of ML and NLP.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> This extensive survey categorizes phishing detection strategies by phase (e.g., detection, prevention, response) and by technique (e.g., blacklist, ML, visual analysis). It critiques user education and toolbars as limited solutions and emphasizes the growing role of ML and NLP. The paper also identifies gaps in scalability and adaptability to novel phishing vectors.</p>
-        </div>
-
-        <h3>HPC and ML Reviews</h3>
-
-        <h4>Primary Papers</h4>
-        <div class="paper">
-            <p class="paper-title">3. "Distributed High-Performance Computing Methods for Accelerating Deep Learning Training," <span class="paper-details">IEEE TPDS, 2024.</span> <a href="DISTRIBUTED_HIGH-PERFORMANCE_COMPUTING_METHODS_FOR_ACCELERATING_DEEP_LEARNING_TRAINING.pdf" target="_blank">[PDF]</a></p>
-            <p class="summary"><span class="summary-label">Summary:</span> Explores HPC acceleration for deep learning, with discussion of cybersecurity applications.</p>
-            <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
-            <p><span class="annotation-label">Note:</span> Cross-listed from Distributed HPC Pipelines.</p>
+            <h4>Primary Papers</h4>
+            <div class="paper">
+                <p class="paper-title">3. "Distributed High-Performance Computing Methods for Accelerating Deep Learning Training," <span class="paper-details">IEEE TPDS, 2024.</span> <a href="DISTRIBUTED_HIGH-PERFORMANCE_COMPUTING_METHODS_FOR_ACCELERATING_DEEP_LEARNING_TRAINING.pdf" target="_blank">[PDF]</a></p>
+                <p class="summary"><span class="summary-label">Summary:</span> Explores HPC acceleration for deep learning, with discussion of cybersecurity applications.</p>
+                <p class="annotation"><span class="annotation-label">Annotation:</span> (To be added after reading the paper.)</p>
+                <p><span class="annotation-label">Note:</span> Cross-listed from Distributed HPC Pipelines.</p>
+            </div>
         </div>
 
         <h2>Next Steps</h2>
