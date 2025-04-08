@@ -148,7 +148,7 @@ This list will be updated as more references are collected.
 
 **3. U. Zara et al., "Phishing Website Detection Using Deep Learning Models," *IEEE Access*, 2024. [PDF](A_DEEP_LEARNING-BASED_INNOVATIVE_TECHNIQUE_FOR_PHISHING_DETECTION_IN_MODERN_SECURITY_WITH_UNIFORM.pdf)**  
 - **Summary**: Combines CNN and LSTM layers to model sequential and spatial features of phishing sites, applied to both visual and structural page data.  
-- **Annotation**: (To be added after reading the paper.)
+- **Annotation**: U. Zara et al. present a dual-layered DL model that leverages the strengths of CNNs for spatial analysis of visual components and LSTMs for learning temporal or sequential characteristics in website structure. The model is tested against multiple phishing datasets and demonstrates enhanced detection rates compared to traditional and standalone DL architectures. It is especially effective in capturing obfuscated visual patterns and complex layout mimicry used by modern phishing sites.
 
 ---
 
@@ -188,7 +188,7 @@ This list will be updated as more references are collected.
 
 **3. "Distributed High-Performance Computing Methods for Accelerating Deep Learning Training," *IEEE TPDS*, 2024. [PDF](DISTRIBUTED_HIGH-PERFORMANCE_COMPUTING_METHODS_FOR_ACCELERATING_DEEP_LEARNING_TRAINING.pdf)**  
 - **Summary**: General paper on accelerating DL with HPC, includes use cases in security applications like phishing and malware.  
-- **Annotation**: (To be added after reading the paper.)
+- **Annotation**: This paper explores distributed HPC techniques such as data parallelism, model sharding, and interconnect-aware scheduling to enhance deep learning model training. It includes a categorized evaluation of MPI, CUDA-aware frameworks, and parameter server architectures. While the scope is general-purpose HPC, it includes targeted discussions on how these techniques are essential in large-scale phishing detection tasks where real-time performance and throughput are critical.
 
 ---
 
@@ -215,6 +215,12 @@ This list will be updated as more references are collected.
 **6. T. Brown & M. Garcia, "Mathematical Modeling of the Influence of Interference," in *Proc. International Conference on High Performance Computing (HPC)*, 2024. [PDF](MATHEMATICAL_MODELING_OF_THE_INFLUENCE_OF_INTERFER.pdf)**  
 - **Summary**: Analyzes how interference and resource allocation in parallelized ML affect model stability and training time.  
 - **Annotation**: (To be added after reading the paper.)
+
+---
+
+**7. Zied Marrakchi et al., "A Novel Framework for Phishing Website Detection Using Deep Learning," 2021. [PDF](#)**  
+- **Summary**: Focuses on optimizing model design and preprocessing for faster and more accurate phishing website detection.  
+- **Annotation**: Marrakchi et al. implement a multilayer perceptron model enhanced by PCA-based feature reduction to streamline detection of phishing sites. The paper emphasizes system performance, highlighting reduced latency and computational load. With an eye on deployment feasibility, it balances between high detection accuracy and operational speed, making it well-suited for constrained environments or embedded security systems.
 
 ---
 
@@ -254,15 +260,21 @@ This list will be updated as more references are collected.
 
 #### Primary Papers
 
-**1. J. Kim and S. Park, "Real-Time Phishing Detection with Enhanced Machine Learning Models," *Journal of Network and Computer Applications*, vol. 210, 2023. [PDF](REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf)**  
+**1. Marchal et al., "PhishStorm: Detecting Phishing With Streaming Analytics," 2014. [PDF](#)**  
+- **Summary**: Introduces PhishStorm, a streaming analytics-based framework for real-time phishing detection using URL inspection and anomaly scores.  
+- **Annotation**: Marchal et al. pioneer a system that performs phishing detection in streaming environments. Using a combination of lexical features and temporal behavior analysis, PhishStorm achieves rapid flagging of malicious URLs. The system is built on scalable stream processing architectures, making it suitable for integration in high-velocity environments such as enterprise gateways and ISPs.
+
+---
+
+**2. J. Kim and S. Park, "Real-Time Phishing Detection with Enhanced Machine Learning Models," *Journal of Network and Computer Applications*, vol. 210, 2023. [PDF](REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf)**  
 - **Summary**: Uses boosted tree models with optimized feature selection for sub-second phishing detection, highlighting latency reduction strategies.  
 - **Annotation**: Features an ensemble ML pipeline with feature pruning for speed. Demonstrates sub-second detection times and pinpoints critical URL features using sensitivity analysis.
 
 ---
 
-**2. E. Shombot et al., "Real-Time Phishing Detection with Enhanced Machine Learning Models," *Cyber Security and Applications*, 2024. [PDF](REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf)**  
+**3. E. Shombot et al., "Real-Time Phishing Detection with Enhanced Machine Learning Models," *Cyber Security and Applications*, 2024. [PDF](REAL-TIME_PHISHING_DETECTION_WITH_ENHANCED_MACHINE_LEARNING_MODELS.pdf)**  
 - **Summary**: Implements ensemble methods with reduced dimensionality for fast phishing classification in live environments.  
-- **Annotation**: (To be added after reading the paper.)
+- **Annotation**: E. Shombot et al. present a practical system using Random Forest and Gradient Boosting with optimized feature selection for real-time phishing detection. Designed for low-latency applications, the paper focuses on reducing prediction time without compromising accuracy. Benchmarks show the system performs well in real-world simulations, supporting its use in email clients, firewalls, and endpoint protection platforms.
 
 ---
 
@@ -270,7 +282,7 @@ This list will be updated as more references are collected.
 
 #### Primary Papers
 
-**3. Z. Chen et al., "Ethereum Phishing Scam Detection Based on Data Augmentation Method and Hybrid Graph Neural Network Model," *IEEE Access*, 2023. [PDF](ETHEREUM_PHISHING_SCAM_DETECTION_BASED_ON_DATA_AUGMENTATION_METHOD_AND_HYBRID_GRAPH_NEURAL_NETWORK_MODEL.pdf)**  
+**4. Z. Chen et al., "Ethereum Phishing Scam Detection Based on Data Augmentation Method and Hybrid Graph Neural Network Model," *IEEE Access*, 2023. [PDF](ETHEREUM_PHISHING_SCAM_DETECTION_BASED_ON_DATA_AUGMENTATION_METHOD_AND_HYBRID_GRAPH_NEURAL_NETWORK_MODEL.pdf)**  
 - **Summary**: Focuses on Ethereum phishing detection using graph neural networks and time-series modeling, identifying scam wallet behavior.  
 - **Annotation**: Proposes a GNN model combining graph learning and time-series processing for Ethereum scam detection. Achieves high accuracy using Conv1D, GRU, and node embedding methods.
 
@@ -278,7 +290,7 @@ This list will be updated as more references are collected.
 
 #### Secondary Papers
 
-**4. X. Wu & Y. Chen, "Dynamic Phishing Detection Using ML and HPC Integration," in *Proc. International Conference on Cybersecurity (ICC)*, 2023. [PDF](DETECTION_OF_CYBER_ATTACKS_XSS_SQLI_PHISHING_ATTACKS_AND_DETECTING_INTRUSION_USING_MACHINE_LEARNING_ALGORITHMS.pdf)**  
+**5. X. Wu & Y. Chen, "Dynamic Phishing Detection Using ML and HPC Integration," in *Proc. International Conference on Cybersecurity (ICC)*, 2023. [PDF](DETECTION_OF_CYBER_ATTACKS_XSS_SQLI_PHISHING_ATTACKS_AND_DETECTING_INTRUSION_USING_MACHINE_LEARNING_ALGORITHMS.pdf)**  
 - **Summary**: Broader cyberattack detection including phishing, using ML models that generalize across intrusion types.  
 - **Annotation**: A comparative ML study applying CNN, Logistic Regression, and SVM to detect XSS, SQL injection, and phishing attacks. The paper finds that different attacks require different algorithms—SVM performs best for phishing, while CNN leads in XSS detection. The study reinforces that hybrid defense systems must adapt to attack-specific characteristics.
 
@@ -292,7 +304,7 @@ This list will be updated as more references are collected.
 
 **1. V. Borate et al., "A Comprehensive Review of Phishing Attack Detection Using Machine Learning Techniques," *IJARSCT*, 2024. [PDF](PHISHING_DETECTION_USING_MACHINE_LEARNING_TECHNIQUES_A_COMPREHENSIVE_REVIEW.pdf)**  
 - **Summary**: Offers a literature review on phishing detection techniques, categorizing approaches by ML type and feature set.  
-- **Annotation**: (To be added after reading the paper.)
+- **Annotation**: This review classifies phishing detection systems by type of input features (URL, HTML, email content) and the ML algorithm used (SVM, Decision Trees, DL models). It outlines the evolution of detection mechanisms and identifies challenges such as dataset imbalance, zero-day attack detection, and real-time scalability. The paper also evaluates the comparative strengths of ensemble and deep learning models in varied deployment contexts.
 
 ---
 
@@ -308,7 +320,7 @@ This list will be updated as more references are collected.
 
 **3. "Distributed High-Performance Computing Methods for Accelerating Deep Learning Training," *IEEE TPDS*, 2024. [PDF](DISTRIBUTED_HIGH-PERFORMANCE_COMPUTING_METHODS_FOR_ACCELERATING_DEEP_LEARNING_TRAINING.pdf)**  
 - **Summary**: Explores HPC acceleration for deep learning, with discussion of cybersecurity applications.  
-- **Annotation**: (To be added after reading the paper.)  
+- **Annotation**: This paper explores distributed HPC techniques such as data parallelism, model sharding, and interconnect-aware scheduling to enhance deep learning model training. It includes a categorized evaluation of MPI, CUDA-aware frameworks, and parameter server architectures. While the scope is general-purpose HPC, it includes targeted discussions on how these techniques are essential in large-scale phishing detection tasks where real-time performance and throughput are critical.  
 - **Note**: Cross-listed from Distributed HPC Pipelines.
 
 ---
