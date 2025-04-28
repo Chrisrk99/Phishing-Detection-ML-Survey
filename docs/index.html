@@ -153,7 +153,7 @@
             </ul>
             <p><strong>Example:</strong> Consider a scenario where an email server processes 1 million emails per hour. A CNN-based phishing detector needs to analyze each email’s content and URLs in under a second. On a single CPU, this might take 5 seconds per email, leading to a backlog. An HPC cluster with 100 nodes can parallelize the task, reducing the processing time to 0.05 seconds per email, enabling real-time detection.</p>
             <div class="illustration-placeholder">
-                [Illustration Placeholder: Diagram showing a single CPU vs. an HPC cluster processing emails. The CPU has a long queue, while the HPC cluster processes emails in parallel across nodes.]
+               
             </div>
             <div class="research-questions">
                 <h4>Open Research Questions:</h4>
@@ -173,7 +173,7 @@
                 <p>Distributed HPC pipelines leverage multiple nodes to parallelize ML tasks, such as training, feature extraction, and inference. In phishing detection, this is critical for handling large datasets (e.g., millions of URLs) and complex models (e.g., deep neural networks). A common framework is TensorFlow with data parallelism, where the dataset is split across nodes, and each node trains a model replica on its subset, periodically synchronizing gradients.</p>
                 <p><strong>Example:</strong> To detect phishing URLs, a dataset of 10 million URLs is split across 10 HPC nodes. Each node trains a CNN on 1 million URLs, and the gradients are averaged every 100 iterations. This reduces training time from 10 hours (on a single machine) to 1 hour.</p>
                 <div class="illustration-placeholder">
-                    [Illustration Placeholder: Flowchart of a distributed HPC pipeline. Show dataset splitting, nodes training CNNs, gradient synchronization, and final model assembly.]
+            
                 </div>
                 <div class="research-questions">
                     <h4>Open Research Questions:</h4>
@@ -208,7 +208,7 @@
                 <p>Cloud-based HPC systems provide on-demand resources for real-time phishing detection, particularly for high-volume applications like email filtering. For example, a CNN can be deployed on a cloud HPC cluster (e.g., AWS EC2 with GPU instances) to analyze email streams. The cloud’s elasticity allows the system to scale dynamically with traffic spikes.</p>
                 <p><strong>Example:</strong> An email server receives 500,000 emails per hour. A CNN on a cloud HPC cluster processes each email in 0.01 seconds by distributing the workload across 50 GPU instances, ensuring real-time detection without delays.</p>
                 <div class="illustration-placeholder">
-                    [Illustration Placeholder: Diagram of a cloud HPC setup. Show email stream entering, cloud instances processing emails with CNNs, and output of phishing/non-phishing labels.]
+                    
                 </div>
                 <div class="research-questions">
                     <h4>Open Research Questions:</h4>
@@ -238,7 +238,7 @@
                 <p>HPC can optimize ML models for phishing detection by reducing latency and improving throughput. Techniques include model pruning (reducing model size), batch processing, and efficient resource allocation. For example, interference management ensures that multiple ML tasks running on an HPC cluster don’t degrade performance.</p>
                 <p><strong>Example:</strong> A phishing detection model on an HPC cluster processes 1,000 URLs per second. By optimizing batch sizes and reducing interference, throughput increases to 5,000 URLs per second without additional hardware.</p>
                 <div class="illustration-placeholder">
-                    [Illustration Placeholder: Graph comparing throughput (URLs/second) before and after HPC optimization, showing the impact of batch processing and interference management.]
+                   
                 </div>
                 <div class="research-questions">
                     <h4>Open Research Questions:</h4>
@@ -280,7 +280,7 @@
                 <p>URL-based phishing detection focuses on analyzing the syntactic and semantic features of URLs to identify malicious patterns. HPC enhances this by enabling large-scale processing of URLs with deep learning models like CNNs and LSTMs. A typical pipeline involves tokenizing URLs into character sequences, feeding them into a CNN, and classifying them as phishing or legitimate.</p>
                 <p><strong>Example:</strong> The URL “http://paypa1.com/login” is tokenized into characters: [h, t, t, p, :, /, /, p, a, y, p, a, 1, ., c, o, m, /, l, o, g, i, n]. A CNN trained on an HPC cluster analyzes this sequence, detecting the misspelling “paypa1” (mimicking “paypal”) as a phishing indicator.</p>
                 <div class="illustration-placeholder">
-                    [Illustration Placeholder: Diagram of a URL-based detection pipeline. Show URL tokenization, CNN layers processing the sequence, and output classification.]
+                   
                 </div>
                 <div class="research-questions">
                     <h4>Open Research Questions:</h4>
@@ -330,7 +330,7 @@
                 <p>Content-based detection analyzes email or webpage content (e.g., HTML, JavaScript, visual layout) to identify phishing indicators. HPC enables the use of complex models like hybrid CNN-RNNs to process large volumes of content in real time. For example, a CNN-RNN model can extract spatial features (e.g., HTML structure) and temporal features (e.g., JavaScript execution) to detect obfuscated phishing scripts.</p>
                 <p><strong>Example:</strong> A phishing webpage mimics a bank login page using obfuscated JavaScript. A CNN-RNN model on an HPC cluster analyzes the HTML and JS, detecting anomalies like hidden redirects, and flags the page as phishing in 0.02 seconds.</p>
                 <div class="illustration-placeholder">
-                    [Illustration Placeholder: Diagram of a CNN-RNN pipeline for webpage analysis. Show HTML/JS input, CNN extracting spatial features, RNN processing temporal features, and final classification.]
+                   
                 </div>
                 <div class="research-questions">
                     <h4>Open Research Questions:</h4>
